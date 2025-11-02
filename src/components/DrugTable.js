@@ -19,7 +19,8 @@ const DrugTable = () => {
   useEffect(() => {
     const fetchDrugs = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/drugs");
+        const API_URL = process.env.REACT_APP_API_URL;
+        const res = await fetch(`${API_URL}/api/drugs`);
         const data = await res.json();
 
         // Format & sort data
