@@ -90,6 +90,7 @@ const DrugTable = () => {
 
   const handleCompanyClick = (company) => {
     setFilter(company);
+    setPage(0);
   };
 
   const formatDate = (dateStr) => {
